@@ -1,6 +1,6 @@
 # SupMail
 ---
-A web application to see, reply, has its mails received in a database
+:e-mail: A web application to see, reply, has its mails received in a database
 
 # Install
 * npm || yarn install
