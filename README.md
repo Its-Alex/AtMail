@@ -9,7 +9,7 @@
 # Configuration
 ```json
 {
-    "databse": {
+    "database": {
         "host": "",
         "database": "",
         "user": "",
