@@ -2,17 +2,19 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import Login from './login.js'
-import NotFound from './notFound.js'
+import Login from './routes/login.js'
+import Signup from './routes/signup.js'
+import Mail from './routes/mail.js'
+import NotFound from './routes/notFound.js'
 
-import './index.css'
+import './css/index.css'
 import registerServiceWorker from './registerServiceWorker'
 
 class Index extends React.Component {
   componentDidMount () {
-    if (!global.localStorage.getItem('token') ||
-    (this.props.location.pathname.indexOf('/login') === -1 &&
-    this.props.location.pathname.indexOf('/signup') === -1)) {
+    if (!global.localStorage.getItem('token') &&
+    this.props.location.pathname.indexOf('/login') === -1 &&
+    this.props.location.pathname.indexOf('/signup') === -1) {
       this.props.history.push('/login')
     }
   }
@@ -21,6 +23,8 @@ class Index extends React.Component {
     return (
       <Switch>
         <Route exact path='/login' component={Login} />
+        <Route exact path='/signup' component={Signup} />
+        <Route exact path='/' component={Mail} />
         <Route component={NotFound} />
       </Switch>
     )
