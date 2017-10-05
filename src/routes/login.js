@@ -17,7 +17,6 @@ class Login extends Component {
 
   affectEvent (name, value) {
     this.setState({[name]: value})
-    console.log(this.state)
   }
 
   handleChange (evt) {
@@ -43,7 +42,7 @@ class Login extends Component {
 
   render () {
     return (
-      <div>
+      <div id='body-center'>
         <input type='email' name='mail' placeholder='Mail' onChange={this.handleChange} onKeyPress={this.handleSubmit} />
         <input type='password' name='password' placeholder='Password' onChange={this.handleChange} onKeyPress={this.handleSubmit} />
         <button name='submit' onClick={this.handleSubmit}>Submit</button>

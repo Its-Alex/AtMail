@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 const axiosInst = require('../utils/axiosInst.js')
 const debounce = require('lodash/debounce')
 
-class Signup extends Component {
+class Register extends Component {
   constructor (props) {
     super(props)
 
@@ -35,13 +35,15 @@ class Signup extends Component {
         confirmPwd: this.state.confirmPwd
       }).then(res => {
         console.log(res.data)
-      }).catch(err => console.log(err.response.data))
+      }).catch(err => {
+        if (err.response) console.log(err.response.data)
+      })
     }
   }
 
   render () {
     return (
-      <div>
+      <div id='body-center'>
         <input type='text' name='username' placeholder='Username' onChange={this.handleChange} onKeyPress={this.handleSubmit} />
         <input type='email' name='mail' placeholder='Mail' onChange={this.handleChange} onKeyPress={this.handleSubmit} />
         <input type='password' name='password' placeholder='Password' onChange={this.handleChange} onKeyPress={this.handleSubmit} />
@@ -52,4 +54,4 @@ class Signup extends Component {
   }
 }
 
-export default Signup
+export default Register
