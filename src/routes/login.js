@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 const axiosInst = require('../utils/axiosInst.js')
+const _ = require('lodash')
 
 class Login extends Component {
   constructor (props) {
@@ -11,10 +12,15 @@ class Login extends Component {
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.affectEvent = _.debounce(this.affectEvent.bind(this), 300, null)
+  }
+
+  affectEvent (name, value) {
+    this.setState({[name]: value})
   }
 
   handleChange (evt) {
-    this.setState({[evt.target.name]: evt.target.value})
+    this.affectEvent(evt.target.name, evt.target.value)
   }
 
   handleSubmit (evt) {
