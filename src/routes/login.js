@@ -15,7 +15,7 @@ class Login extends Component {
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
-    this.affectEvent = debounce(this.affectEvent.bind(this), 300)
+    this.affectEvent = debounce(this.affectEvent.bind(this), 200)
   }
 
   affectEvent (name, value) {

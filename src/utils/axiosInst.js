@@ -2,7 +2,7 @@ const axios = require('axios')
 
 module.exports = () => {
   return axios.create({
-    baseURL: 'http://localhost:3005/',
+    baseURL: 'https://api.itsalex.fr/',
     timeout: 1000,
     headers: {
       'Authorization': global.localStorage.getItem('token')
