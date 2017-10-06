@@ -1,9 +1,93 @@
+:root {
+    --lightBlue: #58B7FF;
+    --blue: #20A0FF;
+    --darkBlue: #1D8CE0;
+    --successColor: #13CE66;
+    --warningColor: #F7BA2A;
+    --errorColor: #FF4949;
+    --black: #1F2D3D;
+    --lightBlack: #324057;
+    --extraLightBlack: #475669;
+    --silver: #8492A6;
+    --lightSilver: #99A9BF;
+    --extraLightSilver: #C0CCDA;
+    --gray: #D3DCE6;
+    --lightGray: #E5E9F2;
+    --extraLightGray: #EFF2F7;
+    --darkWhite: #F9FAFC;
+    --white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 html, body, #root {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
+  font-size: 1rem;
   font-family: 'Rubik', sans-serif;
+  background-color: var(--darkWhite)
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #333;
+}
+
+a:focus {
+    color: #999;
+}
+
+input {
+    margin: 3px;
+    padding: 6px;
+    outline: none;
+    background-color: var(--white);
+    border: 1px solid var(--lightGray);
+    border-radius: 3px;
+    font-size: 1rem;
+    font-weight: 300;
+    -webkit-transition: border 0.4s;
+    -moz-transition: border 0.4s;
+    transition: border 0.4s;
+}
+
+input:focus {
+    font-size: 1rem;
+    border-color: var(--lightBlue);
+}
+
+button {
+    padding: 5px 8px;
+    margin: 6px 6px;
+    outline: none;
+    background-color: var(--blue);
+    border-radius: 3px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--darkWhite);
+    border: none;
+}
+
+button:active {
+    font-size: 1rem;
+    background-color: var(--darkBlue);
+}
+
+button:focus {
+    font-size: 1rem;
+    background-color: var(--darkBlue);
+}
+
+button:hover {
+    background-color: var(--lightBlue);
+    color: var(--white);
 }
 
 #body-center {

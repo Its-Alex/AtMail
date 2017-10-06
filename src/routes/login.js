@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import '../css/login.css'
+
 const axiosInst = require('../utils/axiosInst.js')
 const debounce = require('lodash/debounce')
 
@@ -33,19 +36,20 @@ class Login extends Component {
           global.localStorage.setItem('token', res.data.token)
           this.props.history.push('/')
         }
-        console.log(res.data)
       }).catch(err => {
-        console.log(err.response.data)
+        if (err.response) console.log(err.response.data)
       })
     }
   }
 
   render () {
     return (
-      <div id='body-center'>
+      <div id='body-center' className='login-container'>
+        <span className='title'>SupMail</span>
         <input type='email' name='mail' placeholder='Mail' onChange={this.handleChange} onKeyPress={this.handleSubmit} />
         <input type='password' name='password' placeholder='Password' onChange={this.handleChange} onKeyPress={this.handleSubmit} />
-        <button name='submit' onClick={this.handleSubmit}>Submit</button>
+        <button name='submit' onClick={this.handleSubmit}>Connect</button>
+        <Link to='/register'>Not register yet ?</Link>
       </div>
     )
   }

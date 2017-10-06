@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 const axiosInst = require('../utils/axiosInst.js')
 const debounce = require('lodash/debounce')
@@ -48,7 +49,8 @@ class Register extends Component {
         <input type='email' name='mail' placeholder='Mail' onChange={this.handleChange} onKeyPress={this.handleSubmit} />
         <input type='password' name='password' placeholder='Password' onChange={this.handleChange} onKeyPress={this.handleSubmit} />
         <input type='password' name='confirmPwd' placeholder='Confirm password' onChange={this.handleChange} onKeyPress={this.handleSubmit} />
-        <button name='submit' onClick={this.handleSubmit}>Submit</button>
+        <button name='submit' onClick={this.handleSubmit}>Register</button>
+        <Link to='/login'>Login</Link>
       </div>
     )
   }
