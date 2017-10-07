@@ -5,7 +5,7 @@ module.exports = () => {
     baseURL: 'https://api.itsalex.fr/',
     timeout: 1000,
     headers: {
-      'Authorization': global.localStorage.getItem('token')
+      'Authorization': 'Bearer ' + global.localStorage.getItem('token')
     }
   })
 }

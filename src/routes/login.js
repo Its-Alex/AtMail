@@ -34,7 +34,7 @@ class Login extends Component {
       }).then(res => {
         if (res.data.success === true) {
           global.localStorage.setItem('token', res.data.token)
-          this.props.history.push('/')
+          this.props.history.push('/mail')
         }
       }).catch(err => {
         if (err.response) console.log(err.response.data)
