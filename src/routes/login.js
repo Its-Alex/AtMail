@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import Typist from 'react-typist'
+
 import '../css/login.css'
 
 const axiosInst = require('../utils/axiosInst.js')
@@ -46,6 +48,13 @@ class Login extends Component {
     return (
       <div id='body-center' className='login-container'>
         <span className='title'>SupMail</span>
+        <Typist
+          startDelay={200}
+          cursor={{
+            element: '|',
+            hideWhenDone: true,
+            hideWhenDoneDelay: 500
+          }}>Mail serveur for everyone</Typist><br />
         <input type='email' name='mail' placeholder='Mail' onChange={this.handleChange} onKeyPress={this.handleSubmit} />
         <input type='password' name='password' placeholder='Password' onChange={this.handleChange} onKeyPress={this.handleSubmit} />
         <button name='submit' onClick={this.handleSubmit}>Connect</button>
