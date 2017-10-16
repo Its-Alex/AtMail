@@ -29,13 +29,17 @@ class Login extends Component {
   }
 
   handleSubmit (evt) {
+    console.log('test')
     if (evt.key === 'Enter' || evt.target.name === 'submit') {
       axiosInst().post('/user/signin', {
         mail: this.state.mail,
         password: this.state.password
       }).then(res => {
         if (res.data.success === true) {
-          global.localStorage.setItem('token', res.data.token)
+          global.localStorage.setItem('token', res.data.user.token)
+          global.localStorage.setItem('id', res.data.user.id)
+          global.localStorage.setItem('mail', res.data.user.mail)
+          global.localStorage.setItem('mail_at', res.data.user.mail_at)
           this.props.history.push('/mail')
         }
       }).catch(err => {

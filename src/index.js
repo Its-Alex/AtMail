@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
+import Nav from './routes/navbar.js'
 import Login from './routes/login.js'
 import Register from './routes/register.js'
 import Mail from './routes/mail.js'
@@ -21,18 +22,23 @@ class Index extends React.Component {
 
   render () {
     return (
-      <Switch>
-        <Route exact path='/login' component={Login} />
-        <Route exact path='/register' component={Register} />
-        <Route exact path='/mail' component={Mail} />
-        <Route component={NotFound} />
-      </Switch>
+      <div id='index'>
+        <Nav history={this.props.history} />
+        <Switch>
+          <Route exact path='/mail' component={Mail} />
+          <Route component={NotFound} />
+        </Switch>
+      </div>
     )
   }
 }
 
 ReactDOM.render(
   <Router>
-    <Route path='/' component={Index} />
+    <Switch>
+      <Route exact path='/login' component={Login} />
+      <Route exact path='/register' component={Register} />
+      <Route path='/' component={Index} />
+    </Switch>
   </Router>, document.getElementById('root'))
 registerServiceWorker()
