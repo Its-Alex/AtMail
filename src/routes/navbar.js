@@ -13,7 +13,8 @@ class Navbar extends Component {
           <span>{global.localStorage.getItem('mail_at')}</span>
         </div>
         <div id='nav-links'>
-          <Link to='/acceuil'>Acceuil</Link>
+          <Link to='/acceuil'>Mail</Link>
+          <Link to='/folder'>Sub</Link>
         </div>
       </div>
     )
