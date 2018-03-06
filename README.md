@@ -2,22 +2,26 @@
 
 :e-mail: A web application to see, reply, has its mails received in a database
 
-# Dependencies
+## Dependencies
+
 ```shell
 $ npm install
 ```
 
-# How to hack
+## How to hack
+
 ```
 $ npm run start
 ```
 
-# How to build
+## How to build
+
 ```
 $ npm run build
 ```
 
-# Configuration
+## Configuration
+
 ```json
 {
     "database": {
