@@ -1,11 +1,20 @@
-# SupMail
+# AtMail
 
 :e-mail: A web application to see, reply, has its mails received in a database
 
-# Install
+# Dependencies
 ```shell
-npm i || yarn install
-npm run start || yarn start
+$ npm install
+```
+
+# How to hack
+```
+$ npm run start
+```
+
+# How to build
+```
+$ npm run build
 ```
 
 # Configuration
