@@ -11,6 +11,6 @@ class Mail extends Component {
     )
   }
 }
-  // <p>{this.props.mail.content_html}</p>
+// <p>{this.props.mail.content_html}</p>
 
 export default Mail

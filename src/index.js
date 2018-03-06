@@ -8,6 +8,7 @@ import Register from './routes/register.js'
 import Mail from './routes/mail.js'
 import NotFound from './routes/notFound.js'
 
+import 'element-theme-default'
 import './css/index.css'
 import registerServiceWorker from './registerServiceWorker'
 

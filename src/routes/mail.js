@@ -13,12 +13,12 @@ class Mail extends Component {
 
   componentWillMount () {
     axiosInst().get('/mail')
-    .then(res => {
-      if (res.data.success === true) this.setState({mails: res.data.results})
-    })
-    .catch(err => {
-      console.log(err.response)
-    })
+      .then(res => {
+        if (res.data.success === true) this.setState({mails: res.data.results})
+      })
+      .catch(err => {
+        console.log(err.response)
+      })
   }
 
   render () {

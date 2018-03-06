@@ -54,49 +54,21 @@ input {
     margin: 3px;
     padding: 6px;
     outline: none;
-    background-color: var(--white);
-    border: 1px solid var(--lightGray);
-    border-radius: 3px;
     font-size: 1rem;
     font-weight: 300;
     -webkit-transition: border 0.4s;
     -moz-transition: border 0.4s;
-    transition: border 0.4s;
-}
-
-input:focus {
-    font-size: 1rem;
-    border-color: var(--lightBlue);
 }
 
 button {
     padding: 5px 8px;
     margin: 6px 6px;
     outline: none;
-    background-color: var(--blue);
-    border-radius: 3px;
     font-size: 1rem;
     font-weight: 400;
-    color: var(--darkWhite);
-    border: none;
 }
 
-button:active {
-    font-size: 1rem;
-    background-color: var(--darkBlue);
-}
-
-button:focus {
-    font-size: 1rem;
-    background-color: var(--darkBlue);
-}
-
-button:hover {
-    background-color: var(--lightBlue);
-    color: var(--white);
-}
-
-#body-center {
+.body-center {
     display: flex;
     flex-direction: column;
     justify-content: center;
